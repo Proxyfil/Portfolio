@@ -6,8 +6,8 @@
         <div class="max-sm:flex max-sm:justify-center"><h1 class="sm:text-6xl my-2 text-4xl">Je suis <span class="highlight font-semibold">Proxyfil</span></h1></div>
         <div class="sm:text-2xl max-sm:flex max-sm:justify-center text-xl flex-wrap w-full text-center"><h1 class="">Développeur passionné et enthousiaste.</h1></div>
         <div class="max-sm:flex max-sm:justify-center">
-          <div class="mt-4 button py-2 px-4 rounded w-max max-sm:flex max-sm:justify-center">
-            <a v-on:click="this.scrollFunction()" class="text-lg w-max">En savoir plus</a>
+          <div class="mt-4 button py-2 px-4 rounded w-max max-sm:flex max-sm:justify-center" v-on:click="this.scrollFunction()">
+            <a class="text-lg w-max">En savoir plus</a>
           </div>
         </div>
       </div>
@@ -15,7 +15,7 @@
     <div class="flex justify-center short-pres py-24" id="short-pres">
       <div class="sm:w-3/5 w-5/6">
         <h1 class="highlight sm:text-3xl mb-4 font-semibold text-2xl">Petite présentation</h1>
-        <h1 class="sm:text-xl text-lg">Je m'appelle <span class="highlight">Pierre-Louis Leclerc</span>, jeune développeur et j'ai 18 ans (déjà).<br> J'adore coder des projets, construire des applications ou créer des algorythmes pour résoudre divers problèmes.</h1>
+        <h1 class="sm:text-xl text-lg">Je m'appelle <span class="highlight">Pierre-Louis Leclerc</span>, jeune développeur et j'ai 18 ans (déjà).<br> J'adore coder des projets, construire des applications ou créer des algorithmes pour résoudre divers problèmes.</h1>
         <h1 class="sm:text-xl mt-3 text-lg">Je suis principalement axé sur la <span class="highlight">création d'outils web ou d'analyse d'Open-Data</span>.<br>Je suis passionné par les analyses de données des réseaux sociaux ou des groupements de communautés.<br />J'ai appris majoritairement en auto-didacte et je suis aujourd'hui étudiant en <span class="highlight">1ère année d'école d'ingénieur</span> dans la ville de Tours.</h1>
       </div>
     </div>
