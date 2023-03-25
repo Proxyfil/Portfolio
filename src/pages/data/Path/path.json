@@ -1,0 +1,19 @@
+[
+    {
+        "date": "Septembre 2019 - Juillet 2022",
+        "titre": "Étude en Lycée, filière générale",
+        "desc": ["J'ai pendant 3 ans suivi un cursus général dans le Lycée Jacques de Vaucanson à Tours. En première j'ai choisi les spécialités Mathématiques, Sciences de l'ingénieur, Numérique et sciences informatiques afin de pouvoir faire des études supérieurs plus tard tout en gardant la thématique numérique qui me passionnait déjà.","En Terminale je conserve Mathématiques et Sciences Numériques et Informatiques de cette manière je peux continuer d'approfondir mes connaissances en informatique tout en conservant des portes ouvertes dans les écoles d'ingénieurs grâce aux Mathématiques."],
+        "links": [{"name": "Lycée Jacques de Vaucanson","url": "http://www.vaucanson.org/php5/Accueil/"}]
+    },
+    {
+        "date": "Juillet 2022",
+        "titre": "Obtention du Bac mention Très Bien",
+        "desc": ["Obtention du Bac générale avec mention Très Bien sur les spécialités Mathématiques, Sciences de l\"ingénieur, Numérique et sciences informatiques."]
+    },
+    {
+        "date": "Sept. 2022 - Aujourd'hui",
+        "titre": "Étude en école d'ingénieur",
+        "desc": ["Début du cursus dans le réseau d'école Polytech, dans l'école de Tours pour 2 première années en classe préparatoire intégrée.","Les principales matières dominantes sont les mathématiques, l'informatique, l'anglais et la physique réparties sur 4 semestres."],
+        "links": [{"name": "Polytech Tours","url": "https://polytech.univ-tours.fr/"}]
+    }
+]

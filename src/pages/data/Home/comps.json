@@ -1,0 +1,42 @@
+[
+    {
+        "icon": "python",
+        "nom": "Python",
+        "valeur": 90
+    },
+    {
+        "icon": "nodejs",
+        "nom": "NodeJS",
+        "valeur": 90
+    },
+    {
+        "icon": "sql",
+        "nom": "SQL",
+        "valeur": 80
+    },
+    {
+        "icon": "react",
+        "nom": "React",
+        "valeur": 70
+    },
+    {
+        "icon": "bash",
+        "nom": "Bash",
+        "valeur": 70
+    },
+    {
+        "icon": "git",
+        "nom": "Git / Github",
+        "valeur": 60
+    },
+    {
+        "icon": "php",
+        "nom": "PHP",
+        "valeur": 60
+    },
+    {
+        "icon": "vue",
+        "nom": "VueJS",
+        "valeur": 60
+    }
+]

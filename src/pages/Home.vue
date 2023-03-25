@@ -61,14 +61,17 @@
 import PathItem from "@/components/Home/PathItem.vue";
 import CompItem from "@/components/Home/CompItem.vue";
 import ProjectItem from "@/components/Home/ProjectItem.vue";
+import path from "./data/Home/path.json";
+import comps from "./data/Home/comps.json";
+import projects from "./data/Home/projects.json";
 
 export default {
   name: "Home",
   data() {
     return {
-      Path: [{date: 'Sept. 2022 - Aujourd\'hui', titre: 'Étude en école d\'ingénieur', desc: 'Début du cursus dans le réseau d\'école Polytech, plus précisément à Tours pour 5 ans.', status: 'active'},{date: 'Juillet 2022', titre: 'Obtention du Bac mention Très Bien', desc: 'Obtention du Bac générale avec mention Très Bien sur les spécialités Mathématiques, Sciences de l\'ingénieur, Numérique et sciences informatiques.', status: 'deprecated'},{date: 'Sept. 2019 - Juillet 2022', titre: 'Étude en Lycée, filière générale', desc: 'Cursus de Bac général dans le Lycée Jacques de Vaucanson à Tours avec les spécialités Mathématiques, Sciences de l\'ingénieur, Numérique et sciences informatiques.', status: 'deprecated'}],
-      Comps: [{icon: 'python', nom: 'Python', valeur: 90},{icon: 'nodejs', nom: 'NodeJS', valeur: 90},{icon: 'sql', nom: 'SQL', valeur: 80},{icon: 'react', nom: 'React', valeur: 70},{icon: 'bash', nom: 'Bash', valeur: 70},{icon: 'git', nom: 'Git / Github', valeur: 60},{icon: 'php', nom: 'PHP', valeur: 60},{icon: 'vue', nom: 'VueJS', valeur: 60}],
-      Projects: [{date: 'Fév. 2022 - Aujourd\'hui', titre: 'Tungstène | Analyse et Statistique sur l\'Open-Data', desc: 'Tungstène est un programme qui permet de récolter, d\'analyser et de faire un compte rendu sur les données ouvertes de Twitch. Le but est principalement de comprendre les impacts et importances des grands événements sur cette plateforme.', techs: ['python','nodejs']},{date: 'Juil. 2021 - Aujourd\'hui', titre: 'PollPy | Robot de gestion de paris fictifs', desc: 'PollPy a pour but de fournir un enrichissement d\'expérience sur Discord en proposant un moyen personnalisable de faire des paris entre amis avec de l\'argent fictif pour savoir qui est le meilleur.', techs: ['nodejs','git']},{date: 'Oct. 2020 - Aujourd\'hui', titre: 'Les InGDoc | Une équipe communautaire autour des statistiques', desc: 'Les InGDoc est un collectif formé en 2020 afin de permettre au plus grand nombre de suivre le plus facilement possible les événements importants se déroulant sur Twitch notamment à cause de leur nombre ou leur importance. Notre but est d\'apporter un point de vu différent avec des statistiques et des mediums afin de permettre un suivi le plus simple et concis pour permettre à tous de profiter au maximum des événements quelque soit le temps disponible pour le suivre.', techs: ['python','nodejs','git','vue']}]
+      Path: path,
+      Comps: comps,
+      Projects: projects
     }
   },
   components: {

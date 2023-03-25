@@ -1,0 +1,31 @@
+[
+    {
+        "date": "Fév. 2022 - Aujourd\"hui",
+        "titre": "Tungstène | Analyse et Statistique sur l\"Open-Data",
+        "desc": "Tungstène est un programme qui permet de récolter, d\"analyser et de faire un compte rendu sur les données ouvertes de Twitch. Le but est principalement de comprendre les impacts et importances des grands événements sur cette plateforme.",
+        "techs": [
+            "python",
+            "nodejs"
+        ]
+    },
+    {
+        "date": "Juil. 2021 - Aujourd\"hui",
+        "titre": "PollPy | Robot de gestion de paris fictifs",
+        "desc": "PollPy a pour but de fournir un enrichissement d\"expérience sur Discord en proposant un moyen personnalisable de faire des paris entre amis avec de l\"argent fictif pour savoir qui est le meilleur.",
+        "techs": [
+            "nodejs",
+            "git"
+        ]
+    },
+    {
+        "date": "Oct. 2020 - Aujourd\"hui",
+        "titre": "Les InGDoc | Une équipe communautaire autour des statistiques",
+        "desc": "Les InGDoc est un collectif formé en 2020 afin de permettre au plus grand nombre de suivre le plus facilement possible les événements importants se déroulant sur Twitch notamment à cause de leur nombre ou leur importance. Notre but est d\"apporter un point de vu différent avec des statistiques et des mediums afin de permettre un suivi le plus simple et concis pour permettre à tous de profiter au maximum des événements quelque soit le temps disponible pour le suivre.",
+        "techs": [
+            "python",
+            "nodejs",
+            "git",
+            "vue"
+        ]
+    }
+]

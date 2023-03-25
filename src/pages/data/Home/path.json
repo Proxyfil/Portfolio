@@ -1,0 +1,20 @@
+[
+    {
+        "date": "Sept. 2019 - Juillet 2022",
+        "titre": "Étude en Lycée, filière générale",
+        "desc": "Cursus de Bac général dans le Lycée Jacques de Vaucanson à Tours avec les spécialités Mathématiques, Sciences de l'ingénieur, Numérique et sciences informatiques.",
+        "status": "deprecated"
+    },
+    {
+        "date": "Juillet 2022",
+        "titre": "Obtention du Bac mention Très Bien",
+        "desc": "Obtention du Bac générale avec mention Très Bien sur les spécialités Mathématiques, Sciences de l'ingénieur, Numérique et sciences informatiques.",
+        "status": "deprecated"
+    },
+    {
+        "date": "Sept. 2022 - Aujourd'hui",
+        "titre": "Étude en école d'ingénieur",
+        "desc": "Début du cursus dans le réseau d'école Polytech, plus précisément à Tours pour 5 ans.",
+        "status": "active"
+    }
+]
