@@ -1,31 +1,64 @@
 [
     {
-        "date": "Fév. 2022 - Aujourd\"hui",
-        "titre": "Tungstène | Analyse et Statistique sur l\"Open-Data",
-        "desc": "Tungstène est un programme qui permet de récolter, d\"analyser et de faire un compte rendu sur les données ouvertes de Twitch. Le but est principalement de comprendre les impacts et importances des grands événements sur cette plateforme.",
-        "techs": [
-            "python",
-            "nodejs"
-        ]
-    },
-    {
-        "date": "Juil. 2021 - Aujourd\"hui",
-        "titre": "PollPy | Robot de gestion de paris fictifs",
-        "desc": "PollPy a pour but de fournir un enrichissement d\"expérience sur Discord en proposant un moyen personnalisable de faire des paris entre amis avec de l\"argent fictif pour savoir qui est le meilleur.",
+        "date": "Mars 2023 - Aujourd'hui",
+        "titre": "Tungstène Enriched | Analyse et Statistique sur l'Open-Data",
+        "desc": ["Tungstène Enriched est une version enrichie de Tungstène qui permet de récolter, d'analyser et de faire un compte rendu sur les données ouvertes de Twitch. Le but est principalement de comprendre les impacts et importances des grands événements sur cette plateforme mais aussi de créer du contenu à diffuser en ligne et enfin d'offrir un nouveau moyen de fidéliser son public."],
         "techs": [
             "nodejs",
+            "vue",
             "git"
-        ]
+        ],
+        "image" : "",
+        "links" : [{"name":"Exemple d'usage","url":"https://twitter.com/Les_InGdoc/status/1635234247286947841?s=20"}]
     },
     {
-        "date": "Oct. 2020 - Aujourd\"hui",
+        "date": "Octobre 2020 - Aujourd'hui",
         "titre": "Les InGDoc | Une équipe communautaire autour des statistiques",
-        "desc": "Les InGDoc est un collectif formé en 2020 afin de permettre au plus grand nombre de suivre le plus facilement possible les événements importants se déroulant sur Twitch notamment à cause de leur nombre ou leur importance. Notre but est d\"apporter un point de vu différent avec des statistiques et des mediums afin de permettre un suivi le plus simple et concis pour permettre à tous de profiter au maximum des événements quelque soit le temps disponible pour le suivre.",
+        "desc": ["Les InGDoc est un collectif formé en 2020 afin de permettre au plus grand nombre de suivre le plus facilement possible les événements importants se déroulant sur Twitch notamment à cause de leur nombre ou leur importance. Notre but est d'apporter un point de vu différent avec des statistiques et des mediums afin de permettre un suivi le plus simple et concis pour permettre à tous de profiter au maximum des événements quelque soit le temps disponible pour le suivre."],
         "techs": [
             "python",
             "nodejs",
             "git",
             "vue"
-        ]
+        ],
+        "image" : "",
+        "links" : [{"name":"gdoc.fr","url":"https://gdoc.fr"},{"name":"Twitter","url":"https://twitter.com/Les_InGdoc"}]
+    },
+    {
+        "date": "Janvier 2024",
+        "titre": "Stream For Humanity | Analyse et Statistique sur l'Open-Data",
+        "desc": ["Suivi d'un évènement caritatif sur internet avec des statistiques et un site dynamique, mise en place d'un site web ainsi que d'une chaine de CI/CD, utilisation de Tungstène Enriched."],
+        "techs": [
+            "nodejs",
+            "vue",
+            "git",
+            "k8s",
+            "helm",
+            "docker"
+        ],
+        "image" : "",
+        "links" : [{"name":"humanity.gdoc.fr","url":"https://humanity.gdoc.fr"}]
+    },
+    {
+        "date": "Février 2022 - Février 2023",
+        "titre": "Tungstène | Analyse et Statistique sur l'Open-Data",
+        "desc": ["Tungstène est un programme qui permet de récolter, d'analyser et de faire un compte rendu sur les données ouvertes de Twitch. Le but est principalement de comprendre les impacts et importances des grands événements sur cette plateforme."],
+        "techs": [
+            "python",
+            "nodejs"
+        ],
+        "image" : "",
+        "links" : [{"name":"Exemple d'usage","url":"https://twitter.com/Proxyfil_/status/1551507893299646465?s=20"}]
+    },
+    {
+        "date": "Juillet 2021 - Janvier 2024",
+        "titre": "PollPy | Robot de gestion de paris fictifs",
+        "desc": ["PollPy a pour but de fournir un enrichissement d'expérience sur Discord en proposant un moyen personnalisable de faire des paris entre amis avec de l'argent fictif pour savoir qui est le meilleur. Il permet donc de lancer des paris mais aussi des sondages avec différents types de récompenses."],
+        "techs": [
+            "nodejs",
+            "git"
+        ],
+        "image" : "",
+        "links" : [{"name":"pollpy.com","url":"http://pollpy.com"}]
     }
 ]

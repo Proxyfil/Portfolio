@@ -1,6 +1,6 @@
 <template>
-    <div class="container px-8 py-6">
-        <h1 class="text-xl underline-offset-2 underline">{{ titre }}</h1>
+    <div class='container px-8 py-6'>
+        <h1 class="text-xl underline-offset-2">{{ titre }}</h1>
         <h2 class="text-sm timestamp mb-3">{{ date }}</h2>
         <p v-for="text in desc" class="text-base text-justify mb-1" v-bind:key="text">{{ text }}</p>
         <div class="flex">
@@ -32,8 +32,7 @@ export default {
 }
 
 .container {
-    border: var(--color-primary) 1px solid;
-    border-radius: 10px;
+    border-left: var(--color-primary) 1px solid;
 }
 
 .link {

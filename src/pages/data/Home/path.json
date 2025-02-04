@@ -1,8 +1,14 @@
 [
     {
-        "date": "Sept. 2019 - Juillet 2022",
-        "titre": "Étude en Lycée, filière générale",
-        "desc": "Cursus de Bac général dans le Lycée Jacques de Vaucanson à Tours avec les spécialités Mathématiques, Sciences de l'ingénieur, Numérique et sciences informatiques.",
+        "date": "Sept. 2024 - Aujourd'hui",
+        "titre": "Étude en école d'ingénieur, Alternance en DevOps",
+        "desc": "Entrée à Polytech Montpellier pour y suivre un cursus d'ingénieur en informatique (DO) spécialisé en DevOps, en alternance au CIRAD.",
+        "status": "active"
+    },
+    {
+        "date": "Sept. 2022 - Juillet 2024",
+        "titre": "Études en Classe Préparatoire Intégrée",
+        "desc": "Début du cursus dans le réseau d'école Polytech, plus précisément à Tours pour la classe préparatoire intégrée.",
         "status": "deprecated"
     },
     {
@@ -12,9 +18,9 @@
         "status": "deprecated"
     },
     {
-        "date": "Sept. 2022 - Aujourd'hui",
-        "titre": "Étude en école d'ingénieur",
-        "desc": "Début du cursus dans le réseau d'école Polytech, plus précisément à Tours pour 5 ans.",
-        "status": "active"
+        "date": "Sept. 2019 - Juillet 2022",
+        "titre": "Étude en Lycée, filière générale",
+        "desc": "Cursus de Bac général dans le Lycée Jacques de Vaucanson à Tours avec les spécialités Mathématiques, Sciences de l'ingénieur, Numérique et sciences informatiques.",
+        "status": "deprecated"
     }
 ]

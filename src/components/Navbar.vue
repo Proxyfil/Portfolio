@@ -4,9 +4,9 @@
     <div class="flex items-center">
       <router-link to="/parcours" class="p-1 mx-1 link">Parcours</router-link>
       <div id="main-icon" class="flex items-center p-1 w-max mx-3">
-        <router-link to="/" class="flex items-center">
+        <router-link id="link" to="/" class="flex items-center">
           <img src="/logo.svg" class="w-6 mr-2"/>
-          <h1 class="text-xl font-semibold">Proxyfil</h1>
+          <h1 class="text-xl font-semibold">Pierre-Louis</h1>
         </router-link>
       </div>
       <router-link to="/projets" class="p-1 mx-1 link">Projets</router-link>
@@ -32,7 +32,7 @@ export default {
 </script>
 
 <style scoped>
-#main-icon {
+#link {
   color: #fff;
 }
 
@@ -41,20 +41,20 @@ export default {
   background-color: #0E0E1050;
 }
 
-#main-icon:hover {
+#link:hover {
   color: var(--text-primary);
   cursor: pointer;
 }
 
-#main-icon {
+#link {
   transition: all 0.3s;
 }
 
-#main-icon img {
+#link img {
   transition: all 0.3s;
 }
 
-#main-icon:hover img {
+#link:hover img {
   transform: rotate(-10deg);
 }
 

@@ -1,42 +1,66 @@
 [
     {
         "icon": "python",
-        "nom": "Python",
-        "valeur": 90
+        "nom": "Python"
     },
     {
         "icon": "nodejs",
-        "nom": "NodeJS",
-        "valeur": 90
+        "nom": "NodeJS"
     },
     {
         "icon": "sql",
-        "nom": "SQL",
-        "valeur": 80
+        "nom": "SQL"
     },
     {
         "icon": "react",
-        "nom": "React",
-        "valeur": 70
+        "nom": "React"
     },
     {
         "icon": "bash",
-        "nom": "Bash",
-        "valeur": 70
+        "nom": "Bash"
     },
     {
         "icon": "git",
-        "nom": "Git / Github",
-        "valeur": 60
+        "nom": "Git / Github"
     },
     {
         "icon": "php",
-        "nom": "PHP",
-        "valeur": 60
+        "nom": "PHP"
     },
     {
         "icon": "vue",
-        "nom": "VueJS",
-        "valeur": 60
+        "nom": "VueJS"
+    },
+    {
+        "icon": "html",
+        "nom": "HTML"
+    },
+    {
+        "icon": "css",
+        "nom": "CSS"
+    },
+    {
+        "icon": "js",
+        "nom": "Javascript"
+    },
+    {
+        "icon": "docker",
+        "nom": "Docker"
+    },
+    {
+        "icon": "linux",
+        "nom": "Linux"
+    },
+    {
+        "icon": "nginx",
+        "nom": "Nginx"
+    },
+    {
+        "icon": "postgresql",
+        "nom": "PostgreSQL"
+    },
+    {
+        "icon": "typescript",
+        "nom": "Typescript"
     }
 ]
