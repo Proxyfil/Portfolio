@@ -35,7 +35,7 @@ export const languages: Record<string, Language> = {
   },
   mysql: {
     name: "MySQL",
-    className: "!bg-[#f6ece1]",
+    className: "",
     iconName: "mysql",
   },
   wordpress: {
@@ -69,10 +69,6 @@ export const languages: Record<string, Language> = {
   sass: {
     name: "Sass",
     iconName: "sass",
-  },
-  ts: {
-    name: "TypeScript",
-    iconName: "typescript",
   },
   git: {
     name: "Git",
@@ -108,6 +104,7 @@ export const languages: Record<string, Language> = {
   },
   python: {
     name: "Python",
+    className: "",
     iconName: "python",
   },
   react: {
