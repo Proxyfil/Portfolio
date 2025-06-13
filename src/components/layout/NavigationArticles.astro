@@ -5,6 +5,7 @@ const allPosts = await Astro.glob("../../pages/blog/posts/*.md");
 // Ensure posts have a date before sorting them
 const sortedPosts = allPosts
   .filter(post => post.frontmatter.pubDate)
+  .filter(post => !post.frontmatter.hidden) // Exclude hidden posts
   .sort((a, b) => new Date(b.frontmatter.pubDate).getTime() - new Date(a.frontmatter.pubDate).getTime());
 
 const currentSlug = Astro.url.pathname.split("/").filter(Boolean).pop();
@@ -13,8 +14,6 @@ const currentIndex = sortedPosts.findIndex((post) =>
 );
 const nextPost = currentIndex > 0 ? sortedPosts[currentIndex - 1] : null;
 const prevPost = currentIndex < sortedPosts.length - 1 ? sortedPosts[currentIndex + 1] : null;
-
-console.log({ prevPost, nextPost });
 ---
 
 <nav class="mt-8 flex flex-row gap-2 w-full p-6 max-xl:p-3 max-lg:p-2">
