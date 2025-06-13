@@ -10,7 +10,7 @@ import DatePub from "./DatePub.astro";
 const latestPost = allPosts.reduce((latest, current) => {
   const latestDate = new Date(latest.frontmatter.pubDate).getTime();
   const currentDate = new Date(current.frontmatter.pubDate).getTime();
-  return currentDate > latestDate ? current : latest;
+  return (currentDate > latestDate && !current.frontmatter.hidden) ? current : latest;
 });
 
 const tags = [...new Set(latestPost.frontmatter.tags ?? [])];

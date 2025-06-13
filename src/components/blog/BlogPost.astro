@@ -1,5 +1,5 @@
 ---
-const { title, url, date, image, tags = [], languages = [] } = Astro.props;
+const { title, url, date, image, tags = [], languages = [], hidden = true } = Astro.props;
 
 import Tag from "../ui/Tag.astro";
 import ReadMore from "../ui/ReadMore.astro";

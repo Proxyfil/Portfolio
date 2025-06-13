@@ -22,6 +22,11 @@ allPosts.sort((a, b) => {
 // Filter posts according to props
 let postsToShow = allPosts;
 
+postsToShow = postsToShow.filter((post) => {
+  if (post.frontmatter.hidden) return false; // Exclude hidden posts
+  return true; // Keep all other posts
+});
+
 if (currentPostUrl) {
   // Exclude current post if its URL is provided
   postsToShow = postsToShow.filter((post) => {
@@ -38,6 +43,13 @@ if (currentPostUrl) {
 
 // Limit to 4 posts if all is false
 if (!all) {
+  postsToShow = postsToShow.filter((post) => {
+    if (!post.url) return false; // If no URL, keep the post
+    // Normalize URLs for comparison
+    const normalizedPostUrl = post.url.replace(/\/$/, ""); // Remove trailing slash if exists
+    const normalizedCurrentUrl = currentPostUrl.replace(/\/$/, ""); // Remove trailing slash if exists
+    return normalizedPostUrl !== normalizedCurrentUrl;
+  });
   postsToShow = postsToShow.slice(0, 4);
 }
 ---
@@ -63,6 +75,7 @@ if (!all) {
           tags={post.frontmatter.tags}
           languages={post.frontmatter.languages}
           image={post.frontmatter.image}
+          hidden={post.frontmatter.hidden}
         />
       ))
     }
