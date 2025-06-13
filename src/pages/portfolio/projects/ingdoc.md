@@ -13,7 +13,7 @@ The **InGDoc** is a community group created in the idea of providing to some big
 
 ## 📖 History
 
-Created in 2020 the team was originally founded to follow the <a href="https://zevent.fr/" target="_blank" rel="noopener noreferrer">ZEvent2024</a>. Our first tool was google documents that followed the progress of donation goals and amount raised.
+Created in 2020 the team was originally founded to follow the <a href="https://zevent.fr/" target="_blank" rel="noopener noreferrer">ZEvent2020</a>. Our first tool was google documents that followed the progress of donation goals and amount raised.
 In **2022** we start collecting more data about streams and create infographics at the end of the different events that we follow.
 
 We have worked along some organisations to create custom tools and we still bring ideas of the community to life.
