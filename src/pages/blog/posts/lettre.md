@@ -4,7 +4,7 @@ title: 📜 Lettre pour coeur en peine
 author: Pierre-Louis Leclerc | Proxyfil
 description: ""
 image:
-  url: "/images/posts/retex-sfh.webp"
+  url: "/images/posts/lettre.webp"
   alt: ""
 pubDate: 2025-06-20
 tags:
