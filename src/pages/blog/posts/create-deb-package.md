@@ -120,7 +120,7 @@ Congratulation, you have your signed package ! 👏
 
 ## 🗄️ How to create a mirror and authentify it
 
-### 🪞 Comment on créer le mirroir trivial
+### 🪞 How to create a simple mirror
 
 ---
 
