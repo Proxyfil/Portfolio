@@ -102,7 +102,9 @@ Then we are going to sign the package with gpg to get a .deb.sig file.</p>
 <p>Then we put the .deb file in a folder and we create the mandatory files to distribute the package in a mirror :</p>
 <pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#79B8FF">cd</span><span style="color:#9ECBFF"> /var/www/html/deb</span></span>
 <span class="line"><span style="color:#B392F0">dpkg-scanpackages</span><span style="color:#9ECBFF"> .</span><span style="color:#9ECBFF"> /dev/null</span><span style="color:#F97583"> |</span><span style="color:#B392F0"> gzip</span><span style="color:#79B8FF"> -9c</span><span style="color:#F97583"> ></span><span style="color:#9ECBFF"> Packages.gz</span></span></code></pre>
-<p>After doing so we can add the mirror to our sources on our system by modifying the file <code>/etc/apt/sources.list.d/[package].list</code> and putting</p>
+<p>After doing so we can add the mirror to our sources on our system by modifying the file</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>/etc/apt/sources.list.d/[package].list</span></span></code></pre>
+<p>and putting</p>
 <pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">deb</span><span style="color:#E1E4E8"> [trusted=yes] http://localhost/deb ./</span></span></code></pre>
 <p>You can replace <code>http://localhost/deb</code> with the actual path of your package in the mirror.
 Now that this is done we can update our sources and download the package on our system :</p>
