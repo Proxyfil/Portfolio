@@ -133,7 +133,11 @@ cd /var/www/html/deb
 dpkg-scanpackages . /dev/null | gzip -9c > Packages.gz
 ```
 
-After doing so we can add the mirror to our sources on our system by modifying the file `/etc/apt/sources.list.d/[package].list` and putting
+After doing so we can add the mirror to our sources on our system by modifying the file 
+```
+/etc/apt/sources.list.d/[package].list
+``` 
+and putting
 
 ```bash
 deb [trusted=yes] http://localhost/deb ./
