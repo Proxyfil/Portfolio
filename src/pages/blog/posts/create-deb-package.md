@@ -172,6 +172,33 @@ gpg --default-key [key_id] --clearsign -o InRelease Release
 
 Congratulation you've created your package along with your mirror and secured it ! 👏
 
+### 🔍 How is it done in real life
+
+In many cases you will only create `InRelease` and `Release` files because it is more recent and it cost less for apt.
+You can also create a `Release.gpg` file but it is the old way and it requires apt to do 2 requests to the server instead of one.
+
+Signing the package is not really used nowadays, it is more used to sign the Release file of the mirror.
+
+In example we can see down below how a mirror is often structured :
+
+```bash
+dists/
+└── stable/
+    ├── Release
+    ├── InRelease
+    └── main/
+        ├── binary-amd64/
+        │   └── Packages
+        ├── binary-i386/
+        │   └── Packages
+        └── source/
+            └── Sources
+```
+
+We can create multiple release for deferent programs and architectures, this is really useful when you want to distribute a lot of packages.
+As we can see we only have one file `Release` and `InRelease` for the whole mirror, this is because we are not going to sign the packages but only the release file.
+This is the most common way to create a mirror and distribute packages, it is also the way used by the official Debian and Ubuntu mirrors.
+
 ## 💚 Conclusion
 
 Creating a package can be useful in so much situations, this is one of the way to do it and manage your system but you have plenty of other ways to do so.
