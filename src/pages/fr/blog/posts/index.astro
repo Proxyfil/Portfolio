@@ -1,20 +1,20 @@
 ---
-import Layout from "../../../layouts/Layout.astro";
-import Hero from "../../../components/blog/Hero.astro";
-import Tags from "../../../components/blog/Tags.astro";
-import ListPosts from "../../../components/blog/ListPosts.astro";
+import Layout from "../../../../layouts/Layout.astro";
+import Hero from "../../../../components/blog/Hero.astro";
+import Tags from "../../../../components/blog/Tags.astro";
+import ListPosts from "../../../../components/blog/ListPosts.astro";
 const pageTitle = "Blog - Pierre-Louis Leclerc | Proxyfil";
-const description = "Everything I want to share as a blog.";
+const description = "Tout ce que je veux partager sous forme de blog.";
 const ogimage ={
     url: "/images/blogimage.webp",
-    alt: "proxyfil.fr logo with gold background and light effect. Text: 'Lets learn tech !' and URL 'www.proxyfil.fr'."
+    alt: "Logo proxyfil.fr avec un fond doré et un effet de lumière. Texte: 'Lets learn tech !' et URL 'www.proxyfil.fr'."
 };
 const currentUrl = `${Astro.site}${Astro.url.pathname}`;
 const tweetText = encodeURIComponent(`"${pageTitle}"`);
-import Heading from "../../../components/ui/Heading.astro";
-import Share from "../../../components/ui/Share.astro";
+import Heading from "../../../../components/ui/Heading.astro";
+import Share from "../../../../components/ui/Share.astro";
 
-import Languages from "../../../components/blog/Languages.astro";
+import Languages from "../../../../components/blog/Languages.astro";
 ---
 
 <Layout pageTitle={pageTitle} description={description} ogimage={ogimage}>

@@ -1,0 +1,24 @@
+---
+import { languages } from '../../i18n/ui';
+import { getLangFromUrl } from '../../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+---
+<select class="bg-transparent border-0 border-gray-300 rounded-md p-2"  id="language-select">
+  {Object.entries(languages).map(([langCode, label]) => (
+    <option value={langCode} selected={langCode === lang}>{label}</option>
+  ))}
+</select>
+
+<script>
+  const selectMenu = document.getElementById('language-select') as HTMLSelectElement;
+
+  if (selectMenu) {
+    selectMenu.addEventListener('change', () => {
+        let currentPath = window.location.pathname;
+        let lang = currentPath.split('/')[1];
+        let newPath = currentPath.replace(`/${lang}`, `/${selectMenu.value}`);
+        window.location.pathname = newPath;
+    });
+  }
+</script>

@@ -1,7 +1,7 @@
 ---
-import Layout from "../../../layouts/Layout.astro";
-import Languages from "../../../components/blog/Languages.astro";
-import Heading from "../../../components/ui/Heading.astro";
+import Layout from "../../../../layouts/Layout.astro";
+import Languages from "../../../../components/blog/Languages.astro";
+import Heading from "../../../../components/ui/Heading.astro";
 
 const pageTitle = "Technologies"; // Fixed: Title was "Languages" but heading shows "Technologies"
 const allPosts = await Astro.glob("../posts/*.md");

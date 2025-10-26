@@ -1,5 +1,13 @@
 ---
-const allPosts = await Astro.glob("../../pages/blog/posts/*.md");
+import { getLangFromUrl, useTranslations } from "../../i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+let allPosts = await Astro.glob("../../pages/en/blog/posts/*.md");
+if(lang == 'fr') {
+  allPosts = await Astro.glob("../../pages/fr/blog/posts/*.md");
+}
 
 import Tag from "../ui/Tag.astro";
 import ReadMore from "../ui/ReadMore.astro";
@@ -44,7 +52,7 @@ const imageAlt =
         <div
           class="w-full flex pb-5 gap-2 flex-wrap justify-end z-10 max-sm:px-6 max-sm:pt-6"
           role="list"
-          aria-label="Programming languages"
+          aria-label={t("blog.lastPost.languages")}
         >
           {languages.map((language: unknown) => (
             <Capsule lang={language?.toString() || ""} />
@@ -54,7 +62,7 @@ const imageAlt =
         <a
           href={latestPost.url}
           class="text-mint-50 gap-3 h-full flex items-end max-sm:px-6  rounded-lg transition-all"
-          aria-label={`Read article: ${latestPost.frontmatter.title}`}
+          aria-label={`${t("blog.lastPost.readArticle")}: ${latestPost.frontmatter.title}`}
         >
           <div class="gap-3 flex flex-col justify-end drop-shadow-[1px_6px_1px_rgba(0,_0,_0,_0.3)]">
             <DatePub date={latestPost.frontmatter.pubDate} class="text-mint-50" />
@@ -71,7 +79,7 @@ const imageAlt =
         <div
           class="gap-2 mt-3 justify-start items-center flex flex-row flex-wrap max-sm:px-6 max-sm:pb-6"
           role="list"
-          aria-label="Article tags"
+          aria-label={t("blog.lastPost.tags")}
         >
           {tags.map((tag) => (
             <Tag tag={tag} forceDark="true">{tag}</Tag>

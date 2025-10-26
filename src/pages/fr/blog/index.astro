@@ -1,0 +1,22 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Hero from "../../../components/blog/Hero.astro";
+import Tags from "../../../components/blog/Tags.astro";
+import ListPosts from "../../../components/blog/ListPosts.astro";
+const pageTitle = "Blog - Pierre-Louis Leclerc | Proxyfil";
+const description = "Tout ce que je veux partager sous forme de blog.";
+const ogimage ={
+    url: "/images/blogimage.webp",
+    alt: "Logo proxyfil.fr avec un fond doré et un effet de lumière. Texte: 'Lets learn tech !' et URL 'www.proxyfil.fr'."
+};
+---
+
+<Layout  pageTitle={pageTitle} description={description} ogimage={ogimage}>
+   
+    <Hero />
+    <Tags />
+    <div class="px-8 max-sm:px-4">
+        <ListPosts />
+    </div>
+
+</Layout>
