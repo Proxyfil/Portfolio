@@ -1,6 +1,11 @@
 ---
 import ExperienceItem from "./ExperienceItem.astro";
-const EXPERIENCE = [
+import { getLangFromUrl, useTranslations } from "../../i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+let EXPERIENCE = [
   {
     date: "October 2024 - Present",
     title: "DevOps Engineering Student",
@@ -15,8 +20,27 @@ const EXPERIENCE = [
     description:
       "I worked as a commercial advisor and managed the computer park at Virtual Xperience, a company specializing in virtual reality experiences. My role involved assisting customers, managing user experience, and ensuring the smooth operation of the computer systems.",
   },
-  
 ];
+
+if(lang == 'fr') {
+  EXPERIENCE = [
+    {
+      date: "Octobre 2024 - Présent",
+      title: "Apprenti Ingénieur DevOps",
+      company: "CIRAD / Polytech Montpellier",
+      description:
+        "En tant qu'apprenti Ingénieur DevOps, je suis impliqué dans la conception, la création et le déploiement de solutions pour les chercheurs du CIRAD de Montpellier. J'étudie en parallèle à Polytech Montpellier, où j'apprends à appliquer les principes DevOps pour améliorer le développement d'applications et leur déploiement.",
+    },
+    {
+      date: "Août 2023",
+      title: "Conseiller commercial et gestionnaire du parc informatique",
+      company: "Virtual Xperience",
+      description:
+        "J'ai travaillé en tant que conseiller commercial et ai géré le parc informatique chez Virtual Xperience, une entreprise spécialisée dans les expériences de réalité virtuelle. Mon rôle consistait à assister les clients, gérer l'expérience utilisateur et assurer le bon fonctionnement des systèmes informatiques.",
+    },
+    
+  ];
+}
 ---
 
 <div class="relative max-md:mt-0 mt-8" aria-label="Professional experience">

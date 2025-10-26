@@ -1,6 +1,10 @@
 ---
 import { Icon } from "astro-icon/components";
 import { getLanguage } from "../../utils/languages";
+import { getLangFromUrl, useTranslations } from "../../i18n/utils";
+
+const siteLang = getLangFromUrl(Astro.url);
+const t = useTranslations(siteLang);
 
 interface Props {
   lang: string;
@@ -49,8 +53,8 @@ const getIconContainerClasses = () => {
   linkEnabled ? (
     <a
       class="cursor-pointer"
-      href={`/blog/techs/${lang}`}
-      aria-label={`View articles about ${selectedLanguage.name}`}
+      href={`/${siteLang}/blog/techs/${lang}`}
+      aria-label={`${t('capsule.viewPostsAbout')} ${selectedLanguage.name}`}
       role="link"
     >
       <span

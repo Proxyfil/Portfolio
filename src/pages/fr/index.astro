@@ -1,0 +1,66 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Experience from "../../components/portfolio/Experience.astro";
+import HeroIndex from "../../components/portfolio/HeroIndex.astro";
+import Contact from "../../components/portfolio/Contact.astro";
+import ListProjects from "../../components/portfolio/ListProjects.astro";
+import { Icon } from "astro-icon/components";
+const pageTitle = "Portfolio - Pierre-Louis Leclerc | Proxyfil";
+const description = "Everything you need to know about my portfolio as a DevOps engineer student. Discover my experience, projects, and skills in development and technology.";
+const ogimage = {
+  url: "/images/imagedefault.webp",
+  alt: "Capture d'écran d'un portfolio avec un design moderne et sombre. Featuring Pierre-Louis Leclerc, un étudiant en DevOps avec 3 ans d'expérience, mettant en avant sa passion pour le développement et la technologie. Comprend des sections de contact, des projets et une pile technologique avec des technologies telles que HTML5, JavaScript, TypeScript, Angular, Node.js, CSS, Tailwind, et plus encore.",
+};
+import Heading from "../../components/ui/Heading.astro";
+---
+
+<Layout pageTitle={pageTitle} description={description} ogimage={ogimage}>
+  <HeroIndex />
+
+  <section
+    class="py-8 px-8 max-md:py-4 mb-4 scroll-m-16"
+    id="experience"
+  >
+    <div class="flex flex-col  pt-8 max-w-4xl mx-auto">
+      <div class="flex gap-4 items-center justify-center">
+        <Icon class="text-3xl dark:text-white text-blacktext" name="briefcase" />
+        <Heading text="Expérience de" textGradient="Travail" level={2}/>
+      </div>
+
+      <Experience />
+    </div>
+  </section>
+
+  <section
+    class="bg-gradient-to-t dark:from-[#0e0e10] from-[#fff] from-50% to-transparent to-100% scroll-m-16"
+    id="projects"
+  >
+    <div class="flex flex-col gap-8 max-w-7xl mx-auto">
+      <ListProjects>
+        <div class="flex gap-4 items-center justify-center text-center">
+          <Icon class="text-3xl dark:text-white text-blacktext" name="code" />
+          <Heading text="Projets" textGradient="Réalisés" level={2}/>
+        </div>
+        <p
+          class="z-2 text-center mx-auto text-lg max-xl:text-base max-w-2xl dark:text-gray-200 text-blacktext my-6 leading-6 font-medium"
+        >
+          J'aime <b
+            class=" bg-gradient-to-r  from-riptide-500 to-mint-500 dark:from-riptide-300 dark:to-mint-200 text-transparent bg-clip-text"
+            >transformer des idées en projets réels.</b
+          >
+          <br /> Ici, je vous présente certains des <b
+            class="d bg-gradient-to-r  from-riptide-500 to-mint-500 dark:from-riptide-300 dark:to-mint-200 text-transparent bg-clip-text"
+            >projets</b
+          > sur lesquels j'ai travaillé, en appliquant différentes technologies, un peu de design et beaucoup de créativité.
+          <b
+            class=" bg-gradient-to-r  from-riptide-500 to-mint-500 dark:from-riptide-300 dark:to-mint-200 text-transparent bg-clip-text"
+            >Découvrez-les !</b
+          >
+        </p>
+      </ListProjects>
+    </div>
+  </section>
+
+
+  <Contact />
+</Layout>

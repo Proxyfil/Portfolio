@@ -1,14 +1,28 @@
 ---
+import { getLangFromUrl, useTranslations } from "../../i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
 interface Props {
     variant?: 'default' | 'vertical';
 }
 
-const hobbies = [
+let hobbies = [
     "Photography",
     "Traveling",
     "Music",
     "Data Analysis"
 ];
+
+if(lang === 'fr') {
+    hobbies = [
+        "Photographie",
+        "Voyager",
+        "Musique",
+        "Analyse de données"
+    ];
+}
 
 import Hobbie from "./Hobbie.astro";
 

@@ -6,6 +6,10 @@ import { Icon } from "astro-icon/components";
 import Heading from "../ui/Heading.astro";
 import { AstroError } from "astro/errors";
 import { getCollection} from "astro:content";
+import { getLangFromUrl, useTranslations } from "../../i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 
 const [staticData] = await getCollection('staticData');
 
@@ -42,7 +46,7 @@ if (!staticData) {
             >
               <div class="z-2">
                 <Heading
-                  text={staticData.data.githubText}
+                  text={t('staticData.data.githubText')}
                   textGradient=""
                   level={3}
                 />
@@ -68,11 +72,11 @@ if (!staticData) {
           class="group-hover:scale-103 ease-in-out duration-500 w-5/12 max-sm:w-auto flex justify-center items-center"
         >
           <div
-            aria-label={staticData.data.profileAlt}
+            aria-label={t('staticData.data.profileAlt')}
             class="h-full w-full max-sm:rounded-full rounded-2xl max-sm:size-20 bg-center bg-cover"
             style={`background-image: url(${staticData.data.profileImage})`}
           >
-            <a href={staticData.data.profileLink} class="h-full w-full flex"></a>
+            <a href={`/${lang}/about-me`} class="h-full w-full flex"></a>
           </div>
         </div>
         <div class="p-4 w-7/12 flex flex-col justify-center gap-4 max-sm:w-fit max-md:gap-2">
@@ -80,7 +84,7 @@ if (!staticData) {
             class="font-extrabold text-lg max-xl:text-base max-lg:text-sm max-lg:flex max-lg:flex-col-reverse max-md:flex-row leading-normal max-sm:leading-none"
             ><b
               class="bg-gradient-to-r  from-riptide-400 to-mint-400 dark:from-riptide-200 dark:to-mint-400 text-transparent bg-clip-text"
-              >{staticData.data.profileTitle}</b
+              >{t('staticData.data.profileTitle')}</b
             > 🚀</span
           >
           <Heading
@@ -88,8 +92,8 @@ if (!staticData) {
           level={3}
         />
           <Button
-            link={staticData.data.profileLink}
-            text="About Me"
+            link={`/${lang}/about-me`}
+            text={t('blog.hero.aboutMeButton')}
             iconName="person"
             class="drop-shadow-xl"
           />

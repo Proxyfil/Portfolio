@@ -1,6 +1,14 @@
 ---
 import Project from "./Project.astro";
-const allPosts = await Astro.glob("../../pages/portfolio/projects/*.md");
+import { getLangFromUrl, useTranslations } from "../../i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+let allPosts = await Astro.glob("../../pages/en/portfolio/projects/*.md");
+if(lang == 'fr') {
+  allPosts = await Astro.glob("../../pages/fr/portfolio/projects/*.md");
+}
 // Sort by descending date (most recent first)
 allPosts.sort(
   (a, b) =>
@@ -39,7 +47,7 @@ allPosts.sort(
     <button
       class="absolute font-bold cursor-pointer text-mint-400 dark:text-mint-100 hover:text-mint-500 dark:hover:text-mint-300 transition-all"
     >
-      View More Projects...
+      {t('listProjects.viewMoreButton')}
     </button>
   </div>
 </section>

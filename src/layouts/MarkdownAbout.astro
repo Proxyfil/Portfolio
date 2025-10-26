@@ -7,6 +7,11 @@ import NavArticle from "../components/layout/NavArticle.astro";
 import Contact from "../components/portfolio/Contact.astro";
 import Tools from "../components/portfolio/Tools.astro";
 import { getCollection} from "astro:content";
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
 const { frontmatter } = Astro.props;
 const [staticData] = await getCollection('staticData');
 ---
@@ -50,7 +55,7 @@ const [staticData] = await getCollection('staticData');
                   aria-label="Photo of Pierre-Louis Leclerc (Proxyfil) for the blog"
                 >
                   <a
-                    href="/about-me"
+                    href=`/${lang}/about-me`
                     class="flex h-full w-full"
                     aria-label="View about me page"></a>
                 </div>
@@ -68,18 +73,17 @@ const [staticData] = await getCollection('staticData');
             >
               <b
                 class="bg-gradient-to-r from-riptide-400 to-mint-500 dark:to-mint-200 dark:from-riptide-300 text-transparent bg-clip-text"
-                >{staticData.data.profileTitle}</b
-              > with <b
+                >{t('about.profileTitle')}</b
+              > {t('heroindex.introduction.with')} <b
                 class="bg-gradient-to-r from-riptide-400 to-mint-500 dark:to-mint-200 dark:from-riptide-300 text-transparent bg-clip-text"
-                >3 years of experience</b
-              >, passionate about devops, new technologies, and coffee that 
-              sparks ideas. Let's try to create something unbelievable ! 🚀✨
+                >{t('heroindex.introduction.profileExperience')}</b
+              >{t('heroindex.introduction.end')}
             </p>
           </div>
         </div>
       </div>
       <div class="flex gap-4 items-center">
-        <Heading text="About" textGradient="me" />
+        <Heading text={t('about.title')} textGradient={t('about.titleGradient')} />
       </div>
 
       <div class="markdown text-white" id="content">
@@ -92,7 +96,7 @@ const [staticData] = await getCollection('staticData');
     <div class="flex flex-col gap-8 pt-8 max-w-4xl mx-auto">
       <div class="flex gap-4 items-center justify-center">
         <Icon class="text-3xl text-white" name="briefcase" />
-        <Heading text="Experience" textGradient="Work" level={2} />
+        <Heading text={t('about.experience.experience')} textGradient={t('about.experience.experienceGradient')} level={2} />
       </div>
 
       <Experience />
@@ -102,7 +106,7 @@ const [staticData] = await getCollection('staticData');
     <div class="flex flex-col gap-8 max-w-3xl justify-center mx-auto">
       <div class="flex gap-4 items-center justify-center">
         <Icon class="text-3xl text-white" name="dashboard" />
-        <Heading text="Stack" textGradient="Technological" level={2} />
+        <Heading text={t('about.stack.title')} textGradient={t('about.stack.titleGradient')} level={2} />
       </div>
       <Tools variant="center" />
     </div>

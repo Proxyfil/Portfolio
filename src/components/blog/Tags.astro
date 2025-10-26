@@ -1,5 +1,13 @@
 ---
-const allPosts = await Astro.glob("../../pages/blog/posts/*.md");
+import { getLangFromUrl, useTranslations } from "../../i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+let allPosts = await Astro.glob("../../pages/en/blog/posts/*.md");
+if(lang == 'fr') {
+  allPosts = await Astro.glob("../../pages/fr/blog/posts/*.md");
+}
 import Tag from "../ui/Tag.astro";
 
 const tags = [...new Set(allPosts.map((post) => post.frontmatter.tags).flat())];

@@ -1,7 +1,7 @@
 ---
-import Layout from '../../../layouts/Layout.astro';
-import BlogPost from '../../../components/blog/BlogPost.astro';
-import Heading from '../../../components/ui/Heading.astro';
+import Layout from '../../../../layouts/Layout.astro';
+import BlogPost from '../../../../components/blog/BlogPost.astro';
+import Heading from '../../../../components/ui/Heading.astro';
 
 export async function getStaticPaths() {
     const allPosts: any[] = await Astro.glob("../posts/*.md");
